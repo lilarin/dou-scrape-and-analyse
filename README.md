@@ -1,6 +1,6 @@
 # Job Scraper for dou.ua
 
-This tool scrapes vacancies from the [dou.ua](https://jobs.dou.ua/vacancies) website, allowing users to specify domains and technologies for a more tailored job search. The scraped data is exported as plots into a PDF file for further analysis.
+This tool scrapes and analysis vacancies from the [dou.ua](https://jobs.dou.ua/vacancies) website, allowing users to specify  domains and technologies to collect the desired information.
 
 ## Features
 
@@ -12,7 +12,7 @@ This tool scrapes vacancies from the [dou.ua](https://jobs.dou.ua/vacancies) web
 
 ## Configuration
 
-You can modify the scraping configuration in the `app.config` section.
+You can modify the scraping configuration in the `app.config` section to specify domain and technologies to scrap.
 
 ## Launch
 
@@ -27,14 +27,16 @@ scrapy crawl vacancies
 ```
 To launch the Jupyter Notebook manually, run it yourself as needed.
 
-## Dependencies
+## Requirements
 
-- Python 3.10 +
+- Python 3.10+
 - Scrapy
 - Selenium
-- Jupyter notebook
+- Jupyter Notebook
 
 You can install all dependencies by running:
 ```bash
 pip install -r requirements.txt
 ```
+
+##

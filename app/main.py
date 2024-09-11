@@ -14,11 +14,13 @@ def run_notebook():
     notebook_path = "data_analysis/notebook.ipynb"
     processed_notebook_path = "data_analysis/processed.ipynb"
     csv_file_name= f"{domain}_{time.strftime("%d-%m-%Y")}.csv"
+
     pm.execute_notebook(
         notebook_path,
         processed_notebook_path,
         parameters=dict(file_name=csv_file_name)
     )
+
     os.remove(processed_notebook_path)
 
 

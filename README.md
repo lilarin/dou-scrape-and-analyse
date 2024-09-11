@@ -1,6 +1,6 @@
 # Vacancies Scraper for dou.ua
 
-This tool scrapes and analysis vacancies from the [dou.ua](https://jobs.dou.ua/vacancies), allowing users to specify  domains and technologies to collect the desired information.
+This tool scrapes and analysis vacancies and technologies trends from the [dou.ua](https://jobs.dou.ua/vacancies), allowing users to specify  domains and technologies to collect the desired information.
 
 ## Features
 
@@ -9,6 +9,12 @@ This tool scrapes and analysis vacancies from the [dou.ua](https://jobs.dou.ua/v
 - Specify technologies to measure their popularity.
 - Use Jupyter Notebook to analyze data and generate charts in a PDF file.
 - Support automated execution via script, as well as manual launch with Scrapy and Jupyter Notebook.
+
+## Examples
+
+![image](https://imgur.com/50mzKpm.png)
+![image](https://imgur.com/qtG2boe.png)
+
 
 ## Configuration
 

@@ -7,7 +7,7 @@ from config import domain
 
 
 def run_scrapy_crawler():
-    subprocess.run(["scrapy", "crawl", "positions"])
+    subprocess.run(["scrapy", "crawl", "vacancies"])
 
 
 def run_notebook():
@@ -23,5 +23,5 @@ def run_notebook():
 
 
 if __name__ == "__main__":
-    # run_scrapy_crawler()
+    run_scrapy_crawler()
     run_notebook()

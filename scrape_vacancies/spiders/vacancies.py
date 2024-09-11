@@ -13,8 +13,8 @@ from scrape_vacancies.config import (
 from app.config import domain
 
 
-class PositionsSpider(scrapy.Spider):
-    name = "positions"
+class VacanciesSpider(scrapy.Spider):
+    name = "vacancies"
     allowed_domains = ["jobs.dou.ua"]
 
     filepath = f"scrapped_data/{domain}_{time.strftime("%d-%m-%Y")}.csv"

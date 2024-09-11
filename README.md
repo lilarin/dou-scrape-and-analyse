@@ -13,8 +13,8 @@ This tool scrapes and analysis vacancies and technologies trends from the [dou.u
 ## Examples
 
 ![image](https://imgur.com/50mzKpm.png)
-![image](https://imgur.com/qtG2boe.png)
-![image](https://imgur.com/pPHhrxo.png)
+![image](https://imgur.com/1y5O94P.png)
+![image](https://imgur.com/aiDGeOu.png)
 
 
 ## Configuration

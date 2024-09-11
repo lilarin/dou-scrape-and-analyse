@@ -1,14 +1,15 @@
+import time
+
 from scrapy.http import HtmlResponse
 from selenium import webdriver
-from selenium.common.exceptions import (
-    NoSuchElementException,
-    TimeoutException
-)
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import time
+from selenium.common.exceptions import (
+    NoSuchElementException,
+    TimeoutException
+)
 
 class SeleniumMiddleware:
     def __init__(self):

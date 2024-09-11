@@ -14,6 +14,7 @@ This tool scrapes and analysis vacancies and technologies trends from the [dou.u
 
 ![image](https://imgur.com/50mzKpm.png)
 ![image](https://imgur.com/qtG2boe.png)
+![image](https://imgur.com/pPHhrxo.png)
 
 
 ## Configuration

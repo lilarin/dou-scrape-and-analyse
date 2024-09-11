@@ -1,30 +1,26 @@
 import csv
-from pathlib import Path
 from typing import Generator
 from urllib.parse import urljoin
 import time
+
 import scrapy
 from scrapy.http import Response
-from scrape.config import (
-    experiences,
-    scrape_url,
-    scrape_position,
-    save_dir
+from scrape_vacancies.config import (
+    experience_levels,
+    scrape_url
 )
+
+from app.config import domain
 
 
 class PositionsSpider(scrapy.Spider):
     name = "positions"
     allowed_domains = ["jobs.dou.ua"]
 
-    dir = Path(save_dir)
-    dir.mkdir(parents=True, exist_ok=True)
-    timestamp = time.strftime("%d-%m-%Y")
-
-    filepath = dir / f"{name}_{scrape_position}_{timestamp}.csv"
+    filepath = f"scrapped_data/{domain}_{time.strftime("%d-%m-%Y")}.csv"
 
     def start_requests(self) -> Generator:
-        with open(self.filepath, mode="a", newline="", encoding="utf-8") as file:
+        with open(self.filepath, mode="w", newline="", encoding="utf-8") as file:
             writer = csv.writer(file)
             writer.writerow(
                 [
@@ -37,10 +33,10 @@ class PositionsSpider(scrapy.Spider):
                 ]
             )
 
-        for experience, experience_filter in experiences.items():
+        for experience, experience_filter in experience_levels.items():
             url = urljoin(
                 scrape_url,
-                "?category=" + scrape_position + experience_filter
+                "?category=" + domain + experience_filter
             )
             request = scrapy.Request(url=url, callback=self.parse)
             request.meta["experience"] = experience
